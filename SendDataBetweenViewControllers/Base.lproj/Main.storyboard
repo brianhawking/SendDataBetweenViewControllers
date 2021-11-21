@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="SendDataBetweenViewControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add text to send..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SBL-9D-BFP">
+                                <rect key="frame" x="20" y="369" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vN-Rv-V9N">
+                                <rect key="frame" x="164" y="427.5" width="86" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="   Send   ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Aa-Lm-tsY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data will be sent back from SecondController and displayed here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbc-VZ-lVN">
+                                <rect key="frame" x="20" y="488.5" width="374" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="2vN-Rv-V9N" firstAttribute="top" secondItem="SBL-9D-BFP" secondAttribute="bottom" constant="20" id="Nmc-Bf-r9q"/>
+                            <constraint firstItem="2vN-Rv-V9N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O30-Rc-W60"/>
+                            <constraint firstItem="SBL-9D-BFP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Wf5-Lt-0gq"/>
+                            <constraint firstItem="2vN-Rv-V9N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ela-GO-Yfs"/>
+                            <constraint firstItem="fbc-VZ-lVN" firstAttribute="top" secondItem="2vN-Rv-V9N" secondAttribute="bottom" constant="20" id="h1L-8v-46i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbc-VZ-lVN" secondAttribute="trailing" constant="20" id="lJB-ds-Ag9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SBL-9D-BFP" secondAttribute="trailing" constant="20" id="oy2-LK-6VL"/>
+                            <constraint firstItem="fbc-VZ-lVN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pmQ-Tx-Ojs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textToReceive" destination="fbc-VZ-lVN" id="3Rl-Fr-RIv"/>
+                        <outlet property="textToSend" destination="SBL-9D-BFP" id="S5p-pE-NcI"/>
+                        <segue destination="ecO-KP-o0u" kind="show" identifier="fromAtoB" id="iHv-V9-Fq4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="75"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="UNH-UB-dV9">
+            <objects>
+                <viewController id="ecO-KP-o0u" customClass="SecondViewController" customModule="SendDataBetweenViewControllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G3M-ix-vrC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSf-A2-m5v">
+                                <rect key="frame" x="136" y="400.5" width="142" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="   Send back   ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendBack:" destination="ecO-KP-o0u" eventType="touchUpInside" id="3DB-Tl-Ff4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eix-lM-Xq2">
+                                <rect key="frame" x="20" y="351.5" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="send text back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v0J-be-2H6">
+                                <rect key="frame" x="20" y="461.5" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NrM-bG-pXq"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="NrM-bG-pXq" firstAttribute="trailing" secondItem="v0J-be-2H6" secondAttribute="trailing" constant="20" id="Dyz-T9-GOs"/>
+                            <constraint firstItem="eix-lM-Xq2" firstAttribute="leading" secondItem="NrM-bG-pXq" secondAttribute="leading" constant="20" id="GT8-HZ-KW0"/>
+                            <constraint firstItem="fSf-A2-m5v" firstAttribute="top" secondItem="eix-lM-Xq2" secondAttribute="bottom" constant="20" id="GsP-UV-T8S"/>
+                            <constraint firstItem="NrM-bG-pXq" firstAttribute="trailing" secondItem="eix-lM-Xq2" secondAttribute="trailing" constant="20" id="IVG-qL-O0b"/>
+                            <constraint firstItem="v0J-be-2H6" firstAttribute="top" secondItem="fSf-A2-m5v" secondAttribute="bottom" constant="20" id="IpD-Wb-lEk"/>
+                            <constraint firstItem="fSf-A2-m5v" firstAttribute="centerY" secondItem="G3M-ix-vrC" secondAttribute="centerY" id="UAR-hb-bQ6"/>
+                            <constraint firstItem="v0J-be-2H6" firstAttribute="leading" secondItem="NrM-bG-pXq" secondAttribute="leading" constant="20" id="a35-yv-McZ"/>
+                            <constraint firstItem="fSf-A2-m5v" firstAttribute="centerX" secondItem="G3M-ix-vrC" secondAttribute="centerX" id="qFd-NJ-h2F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ej9-Mg-Lmf"/>
+                    <connections>
+                        <outlet property="textSentFromFirstControllerLabel" destination="eix-lM-Xq2" id="pzn-jP-fJ7"/>
+                        <outlet property="textSentToFirstController" destination="v0J-be-2H6" id="eK0-8B-RTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Kr-cc-eII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

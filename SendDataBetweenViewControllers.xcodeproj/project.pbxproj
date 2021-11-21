@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		F7878AAF274B003A00551462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AAE274B003A00551462 /* AppDelegate.swift */; };
 		F7878AB1274B003A00551462 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AB0274B003A00551462 /* SceneDelegate.swift */; };
-		F7878AB3274B003A00551462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AB2274B003A00551462 /* ViewController.swift */; };
+		F7878AB3274B003A00551462 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AB2274B003A00551462 /* FirstViewController.swift */; };
 		F7878AB6274B003A00551462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7878AB4274B003A00551462 /* Main.storyboard */; };
 		F7878AB9274B003B00551462 /* SendDataBetweenViewControllers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7878AB7274B003B00551462 /* SendDataBetweenViewControllers.xcdatamodeld */; };
 		F7878ABB274B003C00551462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7878ABA274B003C00551462 /* Assets.xcassets */; };
 		F7878ABE274B003C00551462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7878ABC274B003C00551462 /* LaunchScreen.storyboard */; };
 		F7878AC9274B003C00551462 /* SendDataBetweenViewControllersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AC8274B003C00551462 /* SendDataBetweenViewControllersTests.swift */; };
 		F7878AD4274B003C00551462 /* SendDataBetweenViewControllersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AD3274B003C00551462 /* SendDataBetweenViewControllersUITests.swift */; };
+		F7878AE2274B022D00551462 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7878AE1274B022D00551462 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		F7878AAB274B003A00551462 /* SendDataBetweenViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendDataBetweenViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7878AAE274B003A00551462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7878AB0274B003A00551462 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7878AB2274B003A00551462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7878AB2274B003A00551462 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		F7878AB5274B003A00551462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7878AB8274B003B00551462 /* SendDataBetweenViewControllers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SendDataBetweenViewControllers.xcdatamodel; sourceTree = "<group>"; };
 		F7878ABA274B003C00551462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		F7878ACF274B003C00551462 /* SendDataBetweenViewControllersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendDataBetweenViewControllersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7878AD3274B003C00551462 /* SendDataBetweenViewControllersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataBetweenViewControllersUITests.swift; sourceTree = "<group>"; };
 		F7878AD5274B003C00551462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7878AE1274B022D00551462 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +105,12 @@
 			children = (
 				F7878AAE274B003A00551462 /* AppDelegate.swift */,
 				F7878AB0274B003A00551462 /* SceneDelegate.swift */,
-				F7878AB2274B003A00551462 /* ViewController.swift */,
+				F7878AB2274B003A00551462 /* FirstViewController.swift */,
+				F7878AE1274B022D00551462 /* SecondViewController.swift */,
 				F7878AB4274B003A00551462 /* Main.storyboard */,
 				F7878ABA274B003C00551462 /* Assets.xcassets */,
-				F7878ABC274B003C00551462 /* LaunchScreen.storyboard */,
 				F7878ABF274B003C00551462 /* Info.plist */,
+				F7878ABC274B003C00551462 /* LaunchScreen.storyboard */,
 				F7878AB7274B003B00551462 /* SendDataBetweenViewControllers.xcdatamodeld */,
 			);
 			path = SendDataBetweenViewControllers;
@@ -261,8 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7878AB3274B003A00551462 /* ViewController.swift in Sources */,
+				F7878AB3274B003A00551462 /* FirstViewController.swift in Sources */,
 				F7878AAF274B003A00551462 /* AppDelegate.swift in Sources */,
+				F7878AE2274B022D00551462 /* SecondViewController.swift in Sources */,
 				F7878AB1274B003A00551462 /* SceneDelegate.swift in Sources */,
 				F7878AB9274B003B00551462 /* SendDataBetweenViewControllers.xcdatamodeld in Sources */,
 			);
